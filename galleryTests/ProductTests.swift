@@ -23,16 +23,21 @@ class ProductTests: XCTestCase {
     
     
     func testProductJSONParse() {
-        let data = MockFileHelper.shared.readFromFile("product")
-        let json = try? NSJSONSerialization.JSONObjectWithData(data!,
-                                                               options: NSJSONReadingOptions()) as! [String: AnyObject]
-        let product = Product(json: json!)
-        XCTAssertEqual(product?.name, "Die moderne KÃ¼che")
-        XCTAssertEqual(product?.subline, "Geradliniges Design fÃ¼r Puristen")
-        XCTAssertEqual(product?.navigationURL, NSURL(string: "https://static.westwing.de/c/c-die-moderne-kueche2-05131-n.jpg"))
-        XCTAssertEqual(product?.description, "FÃ¼r Trends haben Sie ein sicheres GespÃ¼r und Ihr Interior wirkt immer zeitgemÃ¤ÃŸ? HÃ¶chste Zeit auch die eigene KÃ¼che auf dem neuesten Stand zu halten! Und deshalb haben wir fÃ¼r Sie moderne, hochwertige Produkte ausgewÃ¤hlt: Vom Kochgeschirr Ã¼ber KÃ¼chenutensilien bis hin zum Aufbewahrungshelfer â€“ hier finden Sie alles, um Ihrer KÃ¼che die erste Haube aufzusetzen!")
-        XCTAssertEqual(product?.startTimeFormatted, "Heute")
-        XCTAssertEqual(product?.bannerURL, NSURL(string: "https://static.westwing.de/c/c-die-moderne-kueche2-05131-ml.jpg"))
+        do {
+            let data = MockFileHelper.shared.readFromFile("product")
+            let json = try NSJSONSerialization.JSONObjectWithData(data!,
+                                                                   options: NSJSONReadingOptions()) as! [String: AnyObject]
+            let product = Product(json: json)
+            XCTAssertEqual(product?.name, "Die moderne KÃ¼che")
+            XCTAssertEqual(product?.subline, "Geradliniges Design fÃ¼r Puristen")
+            XCTAssertEqual(product?.navigationURL, NSURL(string: "https://static.westwing.de/c/c-die-moderne-kueche2-05131-n.jpg"))
+            XCTAssertEqual(product?.description, "FÃ¼r Trends haben Sie ein sicheres GespÃ¼r und Ihr Interior wirkt immer zeitgemÃ¤ÃŸ? HÃ¶chste Zeit auch die eigene KÃ¼che auf dem neuesten Stand zu halten! Und deshalb haben wir fÃ¼r Sie moderne, hochwertige Produkte ausgewÃ¤hlt: Vom Kochgeschirr Ã¼ber KÃ¼chenutensilien bis hin zum Aufbewahrungshelfer â€“ hier finden Sie alles, um Ihrer KÃ¼che die erste Haube aufzusetzen!")
+            XCTAssertEqual(product?.startTimeFormatted, "Heute")
+            XCTAssertEqual(product?.bannerURL, NSURL(string: "https://static.westwing.de/c/c-die-moderne-kueche2-05131-ml.jpg"))
+
+        } catch {
+            XCTFail("Failed serialized json data")
+        }
     }
     
     func testArrayProductJSONParse() {

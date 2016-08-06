@@ -9,5 +9,5 @@
 import Foundation
 enum Error: ErrorType {
     case network(String)
-    case parser
+    case parser(String)
 }

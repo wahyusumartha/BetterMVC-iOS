@@ -19,11 +19,11 @@ func parseArrayObject<T: Mappable>(data: NSData,
     
     switch decodedData {
     case .success(let result):
-        guard let array = result as? [AnyObject] else { completion(.failure(.parser)); return }
+        guard let array = result as? [AnyObject] else { completion(.failure(.parser("object is not array"))); return }
         let result: Result<[T], Error> = arrayToModels(array)
         completion(result)
     case .failure:
-        completion(.failure(.parser))
+        completion(.failure(.parser("fail to serialize json from nsdata")))
     }
 }
 
@@ -35,7 +35,7 @@ func parseSingleObject<T: Mappable>(data: NSData,
         let result: Result<T, Error> = T.mapToModel(object)
         completion(result)
     case .failure:
-        completion(.failure(.parser))
+        completion(.failure(.parser("fail to serialize json from nsdata")))
     }
 }
 
@@ -57,6 +57,6 @@ private func decodeData(data: NSData) -> Result<AnyObject, Error> {
                                                               options: NSJSONReadingOptions()) 
         return .success(json)
     } catch {
-        return .failure(.parser)
+        return .failure(.parser("fail to serialize json from nsdata"))
     }
 }
