@@ -11,6 +11,7 @@ target 'gallery' do
   target 'galleryTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'OHHTTPStubs', '~> 5.0.0'
   end
 
   target 'galleryUITests' do

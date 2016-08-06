@@ -26,3 +26,9 @@ struct Product: Decodable {
         self.bannerURL = "banner_url" <~~ json
     }
 }
+
+extension Product: Mappable {
+    static func mapToModel(object: AnyObject) -> Result<Product, Error> {
+        return .success(Product(json: object as! JSON)!)
+    }
+}
