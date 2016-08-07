@@ -7,6 +7,7 @@ target 'gallery' do
 
   # Pods for gallery
   pod 'Gloss', '~> 0.7.3'
+  pod 'SDWebImage', '~> 3.7.6'
   
   target 'galleryTests' do
     inherit! :search_paths

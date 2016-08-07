@@ -13,15 +13,20 @@ PODS:
   - OHHTTPStubs/NSURLSession (5.0.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (5.0.0)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
 
 DEPENDENCIES:
   - Gloss (~> 0.7.3)
   - OHHTTPStubs (~> 5.0.0)
+  - SDWebImage (~> 3.7.6)
 
 SPEC CHECKSUMS:
   Gloss: c97a95d6279821f35fa0138700bce0391bce87c1
   OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
-PODFILE CHECKSUM: 9ccf50dbfbd5f33d6f8ee7f73c69f8b19ff21c8f
+PODFILE CHECKSUM: ecd5dd28a7a14b7d56d82f5224fdf5aac7bdadb9
 
 COCOAPODS: 1.0.1
