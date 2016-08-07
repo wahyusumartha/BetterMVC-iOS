@@ -30,6 +30,8 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Product List"
+        
         self.productListUIController = ProductListUIController(view: self.view,
                                                                tableView: self.tableView, activityIndicator: self.loadingActivityIndicator)
         self.productsHandler.delegate = self.productListUIController

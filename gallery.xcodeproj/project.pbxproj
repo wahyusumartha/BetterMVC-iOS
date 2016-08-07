@@ -33,6 +33,7 @@
 		EBE251C31D570E740089D328 /* ProductCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251C21D570E740089D328 /* ProductCellController.swift */; };
 		EBE251C51D5713980089D328 /* ProductListUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251C41D5713980089D328 /* ProductListUIController.swift */; };
 		EBE251C71D5728AB0089D328 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251C61D5728AB0089D328 /* TableViewDelegate.swift */; };
+		EBE251C91D572E7A0089D328 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251C81D572E7A0089D328 /* AlertController.swift */; };
 		EBFA63111D56F5D600CEAB94 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA630F1D56F5D600CEAB94 /* ProductViewController.swift */; };
 		EBFA63121D56F5D600CEAB94 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFA63101D56F5D600CEAB94 /* ProductViewController.xib */; };
 		EBFA63151D56F65300CEAB94 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA63131D56F65300CEAB94 /* ProductTableViewCell.swift */; };
@@ -94,6 +95,7 @@
 		EBE251C21D570E740089D328 /* ProductCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCellController.swift; sourceTree = "<group>"; };
 		EBE251C41D5713980089D328 /* ProductListUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListUIController.swift; sourceTree = "<group>"; };
 		EBE251C61D5728AB0089D328 /* TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		EBE251C81D572E7A0089D328 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		EBFA630F1D56F5D600CEAB94 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		EBFA63101D56F5D600CEAB94 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		EBFA63131D56F65300CEAB94 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				EBE251BE1D570B720089D328 /* TableViewDataSource.swift */,
 				EBE251C01D570D0F0089D328 /* TableView+Dequeuing.swift */,
 				EBE251C61D5728AB0089D328 /* TableViewDelegate.swift */,
+				EBE251C81D572E7A0089D328 /* AlertController.swift */,
 			);
 			path = "Generic UI";
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				EB59BF2D1D5655B200972CA3 /* Parser.swift in Sources */,
 				EB59BF231D56492900972CA3 /* Error.swift in Sources */,
 				EBE251C51D5713980089D328 /* ProductListUIController.swift in Sources */,
+				EBE251C91D572E7A0089D328 /* AlertController.swift in Sources */,
 				EBFA63111D56F5D600CEAB94 /* ProductViewController.swift in Sources */,
 				EBFA63151D56F65300CEAB94 /* ProductTableViewCell.swift in Sources */,
 				EBE251C11D570D0F0089D328 /* TableView+Dequeuing.swift in Sources */,
