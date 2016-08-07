@@ -266,9 +266,17 @@
 			path = "Generic UI";
 			sourceTree = "<group>";
 		};
+		EBE251CA1D5732780089D328 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
 		EBFA630D1D56F4F300CEAB94 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EBE251CA1D5732780089D328 /* ProductDetail */,
 				EBFA630E1D56F5C500CEAB94 /* Products */,
 			);
 			path = ViewControllers;
