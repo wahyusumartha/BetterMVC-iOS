@@ -34,6 +34,10 @@
 		EBE251C51D5713980089D328 /* ProductListUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251C41D5713980089D328 /* ProductListUIController.swift */; };
 		EBE251C71D5728AB0089D328 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251C61D5728AB0089D328 /* TableViewDelegate.swift */; };
 		EBE251C91D572E7A0089D328 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251C81D572E7A0089D328 /* AlertController.swift */; };
+		EBE251CD1D5733510089D328 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251CB1D5733510089D328 /* ProductDetailViewController.swift */; };
+		EBE251CE1D5733510089D328 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBE251CC1D5733510089D328 /* ProductDetailViewController.xib */; };
+		EBE251D01D57339F0089D328 /* ProductDetailUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251CF1D57339F0089D328 /* ProductDetailUIController.swift */; };
+		EBE251FE1D58BDCC0089D328 /* ProductDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE251FD1D58BDCC0089D328 /* ProductDetailController.swift */; };
 		EBFA63111D56F5D600CEAB94 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA630F1D56F5D600CEAB94 /* ProductViewController.swift */; };
 		EBFA63121D56F5D600CEAB94 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBFA63101D56F5D600CEAB94 /* ProductViewController.xib */; };
 		EBFA63151D56F65300CEAB94 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA63131D56F65300CEAB94 /* ProductTableViewCell.swift */; };
@@ -96,6 +100,10 @@
 		EBE251C41D5713980089D328 /* ProductListUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListUIController.swift; sourceTree = "<group>"; };
 		EBE251C61D5728AB0089D328 /* TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		EBE251C81D572E7A0089D328 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		EBE251CB1D5733510089D328 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		EBE251CC1D5733510089D328 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
+		EBE251CF1D57339F0089D328 /* ProductDetailUIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailUIController.swift; sourceTree = "<group>"; };
+		EBE251FD1D58BDCC0089D328 /* ProductDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailController.swift; sourceTree = "<group>"; };
 		EBFA630F1D56F5D600CEAB94 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		EBFA63101D56F5D600CEAB94 /* ProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
 		EBFA63131D56F65300CEAB94 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -269,6 +277,9 @@
 		EBE251CA1D5732780089D328 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EBE251CB1D5733510089D328 /* ProductDetailViewController.swift */,
+				EBE251CC1D5733510089D328 /* ProductDetailViewController.xib */,
+				EBE251CF1D57339F0089D328 /* ProductDetailUIController.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -299,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				EBFA63181D56F70100CEAB94 /* ProductListController.swift */,
+				EBE251FD1D58BDCC0089D328 /* ProductDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -420,6 +432,7 @@
 				EBFA63161D56F65300CEAB94 /* ProductTableViewCell.xib in Resources */,
 				EBFA63121D56F5D600CEAB94 /* ProductViewController.xib in Resources */,
 				EB7628961D5637790093DFAB /* Main.storyboard in Resources */,
+				EBE251CE1D5733510089D328 /* ProductDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,9 +590,12 @@
 				EB59BF2D1D5655B200972CA3 /* Parser.swift in Sources */,
 				EB59BF231D56492900972CA3 /* Error.swift in Sources */,
 				EBE251C51D5713980089D328 /* ProductListUIController.swift in Sources */,
+				EBE251FE1D58BDCC0089D328 /* ProductDetailController.swift in Sources */,
 				EBE251C91D572E7A0089D328 /* AlertController.swift in Sources */,
 				EBFA63111D56F5D600CEAB94 /* ProductViewController.swift in Sources */,
+				EBE251D01D57339F0089D328 /* ProductDetailUIController.swift in Sources */,
 				EBFA63151D56F65300CEAB94 /* ProductTableViewCell.swift in Sources */,
+				EBE251CD1D5733510089D328 /* ProductDetailViewController.swift in Sources */,
 				EBE251C11D570D0F0089D328 /* TableView+Dequeuing.swift in Sources */,
 				EB59BF1A1D56414300972CA3 /* Product.swift in Sources */,
 				EBE251BF1D570B720089D328 /* TableViewDataSource.swift in Sources */,

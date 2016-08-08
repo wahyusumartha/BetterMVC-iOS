@@ -13,14 +13,14 @@ class ProductListUIController {
     private unowned var tableView: UITableView
     private unowned var activityIndicatorView: UIActivityIndicatorView
     private let tableViewDataSource: TableViewDataSource<ProductCellController, ProductTableViewCell>
-    private let tableViewDelegate: TableViewDelegate
+    internal private(set) var products: [Product] = []
     
     var state: UIState = .loading {
         willSet(newState) {
             update(newState)
         }
     }
-
+    
     init(view: UIView,
          tableView: UITableView,
          activityIndicator: UIActivityIndicatorView) {
@@ -31,10 +31,6 @@ class ProductListUIController {
         let nib = UINib(nibName: "ProductTableViewCell", bundle: nil)
         self.tableViewDataSource = TableViewDataSource<ProductCellController, ProductTableViewCell>(tableView: self.tableView, nib: nib)
         self.tableView.dataSource = self.tableViewDataSource
-        
-        self.tableViewDelegate = TableViewDelegate(tableView: tableView)
-        self.tableViewDelegate.rowHeight = 92
-        self.tableView.delegate = self.tableViewDelegate
         
         update(state)
     }
@@ -64,6 +60,7 @@ extension ProductListUIController: ProductListDelegate {
         self.activityIndicatorView.stopAnimating()
         self.tableView.hidden = false
         self.tableViewDataSource.dataSource = products.map(ProductCellController.init)
+        self.products = products
     }
     
     func loadingToError(let error: Error) {

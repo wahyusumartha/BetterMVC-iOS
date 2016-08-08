@@ -26,7 +26,6 @@ final class TableViewDataSource<Model, Cell: UITableViewCell where Cell: Reusabl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let cell: Cell = tableView.dequeueReusableCell(at: indexPath)
         cell.cellController = dataSource[indexPath.row]
         return cell

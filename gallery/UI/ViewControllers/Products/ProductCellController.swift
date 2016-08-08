@@ -11,9 +11,10 @@ protocol ProductCellRepresentable {
     var name: String { get }
     var subline: String { get }
     var navigationURL: NSURL { get }
+    func selectCell(at indexPath: NSIndexPath)
 }
 
-struct ProductCellController {
+struct ProductCellController: ProductCellRepresentable {
     let name: String
     let subline: String
     let navigationURL: NSURL
@@ -22,5 +23,9 @@ struct ProductCellController {
         self.name = product.name!
         self.subline = product.subline!
         self.navigationURL = product.navigationURL!
+    }
+    
+    func selectCell(at indexPath: NSIndexPath) {
+        
     }
 }
