@@ -33,20 +33,26 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6qa-CU-ZEe">
+                        <rect key="frame" x="47" y="36" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qh5-Ms-9Rc" firstAttribute="leading" secondItem="LUx-Ut-7ia" secondAttribute="trailing" constant="5" id="ECM-01-ddy"/>
+                    <constraint firstItem="6qa-CU-ZEe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="47" id="FC8-op-Gxc"/>
                     <constraint firstAttribute="bottom" secondItem="LUx-Ut-7ia" secondAttribute="bottom" id="TOi-G2-HsJ"/>
                     <constraint firstItem="2RY-Wi-J4T" firstAttribute="leading" secondItem="LUx-Ut-7ia" secondAttribute="trailing" constant="5" id="Tm6-X1-f7g"/>
                     <constraint firstAttribute="trailing" secondItem="qh5-Ms-9Rc" secondAttribute="trailing" constant="5" id="beV-Vx-vJw"/>
                     <constraint firstItem="qh5-Ms-9Rc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gFf-eY-msz"/>
                     <constraint firstAttribute="trailing" secondItem="2RY-Wi-J4T" secondAttribute="trailing" constant="5" id="gia-72-LBQ"/>
+                    <constraint firstItem="6qa-CU-ZEe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hAg-h7-xsb"/>
                     <constraint firstItem="2RY-Wi-J4T" firstAttribute="top" secondItem="qh5-Ms-9Rc" secondAttribute="bottom" constant="10" id="iyL-CW-jyl"/>
                     <constraint firstItem="LUx-Ut-7ia" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pwn-xQ-mYm"/>
                     <constraint firstItem="LUx-Ut-7ia" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ubC-sq-uxs"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="activityIndicator" destination="6qa-CU-ZEe" id="grb-NZ-UgF"/>
                 <outlet property="nameLabel" destination="qh5-Ms-9Rc" id="PKO-3O-qR7"/>
                 <outlet property="navigationImageView" destination="LUx-Ut-7ia" id="CRn-3x-f7F"/>
                 <outlet property="sublineLabel" destination="2RY-Wi-J4T" id="6hF-gm-fJI"/>

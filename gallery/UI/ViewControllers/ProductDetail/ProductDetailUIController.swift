@@ -25,10 +25,18 @@ class ProductDetailUIController {
 extension ProductDetailUIController: ProductDetailDelegate {
     func assignProductToUserInterface(newProduct: Product) {
         let viewController = self.viewController
-        viewController.bannerImageView.sd_setImageWithURL(newProduct.bannerURL)
         viewController.descriptionLabel.text = newProduct.description
         viewController.productNameLabel.text = newProduct.name
         viewController.startTimeFormatLabel.text = newProduct.startTimeFormatted
         viewController.sublineLabel.text = newProduct.subline
+        
+        viewController.activityIndicatorView.hidden = false
+        viewController.activityIndicatorView.startAnimating()
+        viewController.bannerImageView.sd_setImageWithURL(newProduct.bannerURL) { (image, error, cacheType, url) in
+            if let _ = image {
+                viewController.activityIndicatorView.stopAnimating()
+                viewController.activityIndicatorView.hidden = true
+            }
+        }
     }
 }

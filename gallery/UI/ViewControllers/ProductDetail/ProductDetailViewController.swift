@@ -15,6 +15,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var startTimeFormatLabel: UILabel!
     @IBOutlet weak var sublineLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
     private let productDetailHandler: ProductDetailHandler
     private var productDetailListUIController: ProductDetailUIController!
